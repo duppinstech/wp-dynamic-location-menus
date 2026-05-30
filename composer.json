@@ -1,0 +1,14 @@
+{
+    "name": "duppins-technology/dynamic-location-menus",
+    "description": "WordPress plugin that rewrites nav menu links based on location context.",
+    "type": "wordpress-plugin",
+    "license": "proprietary",
+    "require": {
+        "php": ">=7.4",
+        "yahnis-elsts/plugin-update-checker": "^5.4"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}
