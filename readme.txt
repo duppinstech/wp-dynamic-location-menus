@@ -45,12 +45,17 @@ If region is left blank on a location, the plugin collapses the empty segment so
 
 Slot matching is exact-depth. A configured slot of `services/roadside-assistance` matches only URLs at that exact depth — a deeper URL like `services/roadside-assistance/battery-boost` is treated as a sub-service and not rewritten. Add an explicit slot row to rewrite sub-service URLs.
 
+= Support =
+
+Support: [support@duppinstech.com](mailto:support@duppinstech.com). Made by [Duppins Technology](https://duppinstech.com).
+
 == Installation ==
 
-1. Upload the `dynamic-location-menus` folder to `/wp-content/plugins/`.
-2. Activate the plugin through the **Plugins** screen in WordPress.
-3. Go to **Settings → Location Menus** to configure locations, slots, and URL patterns.
-4. Click **Rescan pages now** on the Coverage tab after configuration.
+1. Download `wp-dynamic-location-menus.zip` from the latest [GitHub release](https://github.com/duppinstech/wp-dynamic-location-menus/releases).
+2. In WordPress, go to **Plugins → Add New → Upload Plugin**, choose the zip, and click **Install Now**.
+3. Activate Dynamic Location Menus through the **Plugins** screen.
+4. Go to **Settings → Location Menus** and add your locations and service slots.
+5. Open the **Coverage matrix** tab and click **Rescan pages now** after you publish city pages.
 
 == Frequently Asked Questions ==
 
@@ -66,10 +71,25 @@ Choose one of three behaviors in settings: use the configured fallback URL (defa
 
 Full-page caches that key on request URL work transparently. Fragment caches that cache menu HTML separately should vary on the request path.
 
+== Screenshots ==
+
+1. Settings for locations, service slots, and what happens when a city page does not exist.
+2. Coverage matrix showing which cities have a page for each service. Create fills one gap.
+3. Clone pages copies a template to other cities and replaces the city name, slug, and phone.
+4. URL preview for a city page, with the detected location and the rewritten slot links.
+
 == Changelog ==
 
 = 2.0.0 =
-* Phone field on locations; page cloning with Elementor meta support; consistency audit tab; coverage matrix Create/bulk-clone actions.
+* Each location can store a phone number, used when cloning pages and when checking that city pages match.
+* The coverage matrix can create the missing page for one city, or clone one service to every city that does not have it yet.
+* Clone pages copies a template page to selected cities and replaces the city name, slug, and phone in the stored content, including Elementor data.
+* Consistency checks the stored content of each city's pages for the phone number and location name from Settings.
+* Unchecking Skip existing on a clone batch clones to cities that already have a page for that service.
+* Location titles use the display label you configured, including when the old title had the city and state without a comma.
+* A city page nested under a parent service is indexed as that specific service. When both a service-area page and a flat landing page match, the service-area page is used.
+* A menu link is rewritten when it has the same depth and final slug as a configured slot, even if a folder in the middle of the path is different.
+* Menus rewrite on city pages even when the menu renders before the main content, including city hub URLs such as `/service-areas/kansas/kansas-city/`.
 
 = 1.1.3 =
 * City page registry scans published pages only; blog posts are no longer used as menu rewrite targets.
