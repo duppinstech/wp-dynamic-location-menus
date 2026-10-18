@@ -1,0 +1,5 @@
+# Local Claude notes
+
+Copy this file to `CLAUDE.local.md`. The copy is gitignored.
+
+Use it for notes that apply only to this checkout. Do not put tokens or passwords in either file.
