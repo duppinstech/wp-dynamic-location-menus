@@ -62,8 +62,9 @@ dynamic-location-menus/
     ├── class-dlm-resolver.php       Decide each menu item's final URL
     ├── class-dlm-menu-filter.php    Hook into wp_nav_menu_objects
     ├── class-dlm-scanner.php        Walk pages, build registry
-    ├── class-dlm-admin.php          Settings page
-    └── class-dlm-github-updater.php GitHub Releases update checker
+    ├── class-dlm-admin.php            Settings page
+    ├── class-dlm-github-updater.php   GitHub Releases update checker
+    └── class-dlm-plugin-info.php      Plugins screen details and links
 ```
 
 ## Delivery and updates

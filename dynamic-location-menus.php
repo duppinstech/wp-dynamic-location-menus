@@ -34,6 +34,7 @@ require_once DLM_PATH . 'includes/class-dlm-audit.php';
 require_once DLM_PATH . 'includes/class-dlm-cloner.php';
 require_once DLM_PATH . 'includes/class-dlm-admin.php';
 require_once DLM_PATH . 'includes/class-dlm-github-updater.php';
+require_once DLM_PATH . 'includes/class-dlm-plugin-info.php';
 
 // Updates from GitHub Releases. Booted at load so WP-Cron and background auto-updates see releases.
 // Disable with define( 'DLM_DISABLE_GITHUB_UPDATER', true ).
@@ -43,6 +44,13 @@ DLM_GitHub_Updater::boot([
     'owner'   => 'duppinstech',
     'repo'    => 'wp-dynamic-location-menus',
     'prefix'  => 'dlm',
+]);
+
+DLM_Plugin_Info::boot([
+    'file'         => DLM_FILE,
+    'settings_url' => 'options-general.php?page=dlm-settings',
+    'help_url'     => '',
+    'support_url'  => 'mailto:support@duppinstech.com',
 ]);
 
 /**
