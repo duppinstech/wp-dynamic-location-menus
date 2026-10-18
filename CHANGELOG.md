@@ -75,9 +75,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Missing-page behavior: fallback, leave unchanged, or hide
 - GitHub-based plugin update checker
 
-[2.0.0]: https://github.com/oduppinsjr/wp-dynamic-location-menus/releases/tag/v2.0.0
-[1.1.3]: https://github.com/oduppinsjr/wp-dynamic-location-menus/releases/tag/v1.1.3
-[1.1.2]: https://github.com/oduppinsjr/wp-dynamic-location-menus/releases/tag/v1.1.2
-[1.1.1]: https://github.com/oduppinsjr/wp-dynamic-location-menus/releases/tag/v1.1.1
-[1.1.0]: https://github.com/oduppinsjr/wp-dynamic-location-menus/releases/tag/v1.1.0
-[1.0.0]: https://github.com/oduppinsjr/wp-dynamic-location-menus/releases/tag/v1.0.0
+[2.0.0]: https://github.com/duppinstech/wp-dynamic-location-menus/releases/tag/v2.0.0
+[1.1.3]: https://github.com/duppinstech/wp-dynamic-location-menus/releases/tag/v1.1.3
+[1.1.2]: https://github.com/duppinstech/wp-dynamic-location-menus/releases/tag/v1.1.2
+[1.1.1]: https://github.com/duppinstech/wp-dynamic-location-menus/releases/tag/v1.1.1
+[1.1.0]: https://github.com/duppinstech/wp-dynamic-location-menus/releases/tag/v1.1.0
+[1.0.0]: https://github.com/duppinstech/wp-dynamic-location-menus/releases/tag/v1.0.0

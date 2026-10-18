@@ -2,7 +2,7 @@
 
 ## Current
 
-- Ship plugin updates by tagging `v*` on `main`. `.github/workflows/release.yml` builds `dynamic-location-menus-x.y.z.zip` and publishes the GitHub Release.
+- Ship plugin updates by tagging `v*` on `main`. `.github/workflows/release.yml` builds `wp-dynamic-location-menus.zip` and publishes the GitHub Release.
 - Keep product behavior as it is unless a task asks for a product change.
 
 ## Baseline

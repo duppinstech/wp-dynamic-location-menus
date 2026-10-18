@@ -1,17 +1,17 @@
 <?php
 /**
  * Plugin Name:       Dynamic Location Menus
- * Plugin URI:        https://duppinstechnology.com/plugins/dynamic-location-menus/
+ * Plugin URI:        https://github.com/duppinstech/wp-dynamic-location-menus
  * Description:       Rewrites nav menu links on the fly based on the visitor's current location context. Build ONE master menu with generic service URLs; on city-specific pages, each link automatically swaps to the matching city page. Locations, URL patterns, and service slots are all admin-configurable.
  * Version:           2.0.0
  * Author:            Duppins Technology
- * Author URI:        https://duppinstechnology.com/
+ * Author URI:        https://duppinstech.com
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       dynamic-location-menus
  * Requires PHP:      7.4
  * Requires at least: 6.0
- * Update URI:        https://github.com/oduppinsjr/wp-dynamic-location-menus
+ * Update URI:        https://github.com/duppinstech/wp-dynamic-location-menus
  */
 
 if (!defined('ABSPATH')) { exit; }
@@ -33,7 +33,17 @@ require_once DLM_PATH . 'includes/class-dlm-content.php';
 require_once DLM_PATH . 'includes/class-dlm-audit.php';
 require_once DLM_PATH . 'includes/class-dlm-cloner.php';
 require_once DLM_PATH . 'includes/class-dlm-admin.php';
-require_once DLM_PATH . 'includes/class-dlm-updater.php';
+require_once DLM_PATH . 'includes/class-dlm-github-updater.php';
+
+// Updates from GitHub Releases. Booted at load so WP-Cron and background auto-updates see releases.
+// Disable with define( 'DLM_DISABLE_GITHUB_UPDATER', true ).
+DLM_GitHub_Updater::boot([
+    'file'    => DLM_FILE,
+    'version' => DLM_VERSION,
+    'owner'   => 'duppinstech',
+    'repo'    => 'wp-dynamic-location-menus',
+    'prefix'  => 'dlm',
+]);
 
 /**
  * Bootstrap.
@@ -42,7 +52,6 @@ function dlm_init() {
     DLM_Menu_Filter::register();
     if (is_admin()) {
         DLM_Admin::register();
-        DLM_Updater::register();
     }
     DLM_Scanner::register_cron();
 }

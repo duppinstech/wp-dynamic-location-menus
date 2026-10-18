@@ -12,6 +12,7 @@ if (!defined('WP_UNINSTALL_PLUGIN')) {
 delete_option('dlm_settings');
 delete_option('dlm_page_map');
 delete_option('dlm_last_scan');
+delete_site_option('dlm_github_release');
 
 $timestamp = wp_next_scheduled('dlm_daily_scan');
 if ($timestamp) {

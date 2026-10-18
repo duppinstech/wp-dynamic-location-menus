@@ -63,16 +63,16 @@ dynamic-location-menus/
     ├── class-dlm-menu-filter.php    Hook into wp_nav_menu_objects
     ├── class-dlm-scanner.php        Walk pages, build registry
     ├── class-dlm-admin.php          Settings page
-    └── class-dlm-updater.php        GitHub release update checker
+    └── class-dlm-github-updater.php GitHub Releases update checker
 ```
 
 ## Delivery and updates
 
-This plugin checks GitHub for new releases and shows updates in **Dashboard → Updates** like a normal WordPress plugin.
+This plugin checks the public GitHub repository for new releases and shows updates in **Dashboard → Updates** like a normal WordPress plugin.
 
 ### Install on a site
 
-1. Download the latest `dynamic-location-menus-x.y.z.zip` from [GitHub Releases](https://github.com/oduppinsjr/wp-dynamic-location-menus/releases).
+1. Download `wp-dynamic-location-menus.zip` from the latest [GitHub Release](https://github.com/duppinstech/wp-dynamic-location-menus/releases).
 2. Upload and activate it in WordPress.
 3. The installed folder must be named `dynamic-location-menus`.
 
@@ -88,25 +88,13 @@ git tag v1.0.1
 git push origin v1.0.1
 ```
 
-GitHub Actions builds a release zip (including Composer dependencies) and attaches it to the release. Sites with the plugin installed will detect the update automatically.
-
-### Private repository access
-
-If the GitHub repository is private, add this to `wp-config.php` on each site that should receive updates:
-
-```php
-define('DLM_GITHUB_TOKEN', 'ghp_your_read_only_token_here');
-```
-
-Use a fine-grained or classic token with read access to the repository only. Do not commit tokens to this repo.
+GitHub Actions checks that the tag matches the plugin version, runs lint and tests, builds `wp-dynamic-location-menus.zip`, and attaches it to the release. Sites with the plugin installed will detect the update automatically.
 
 ### Local development
 
 ```bash
 composer install --no-dev --optimize-autoloader
 ```
-
-The update checker library lives in `vendor/` and is included in release zips automatically.
 
 ## Filters
 
@@ -122,7 +110,7 @@ You can also override programmatically by storing the `dlm_settings` option from
 
 ## Versioning
 
-See [CHANGELOG.md](CHANGELOG.md) for release history. This is v1.0.0.
+See [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ## License
 
