@@ -10,5 +10,9 @@
     "config": {
         "optimize-autoloader": true,
         "sort-packages": true
+    },
+    "scripts": {
+        "lint": "php tests/lint.php",
+        "test": "php tests/run.php"
     }
 }

@@ -127,3 +127,12 @@ See [CHANGELOG.md](CHANGELOG.md) for release history. This is v1.0.0.
 ## License
 
 Proprietary — see [LICENSE.md](LICENSE.md). Security reports: [SECURITY.md](SECURITY.md).
+
+## Tests
+
+Lint parses plugin PHP files and skips `vendor/`. The test command is a smoke check. It does not boot WordPress.
+
+```bash
+composer lint
+composer test
+```
