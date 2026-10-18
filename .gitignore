@@ -5,3 +5,11 @@ Thumbs.db
 *.zip
 .idea/
 .vscode/
+.env*
+dist/
+build/
+__pycache__/
+.venv/
+CLAUDE.local.md
+.claude/settings.local.json
+.claude/worktrees/
