@@ -3,20 +3,20 @@
 _Shared, committed memory. Keep it factual and current. If the repo is public, so is this file._
 
 - **Product:** Dynamic Location Menus, a WordPress plugin. Owner: Odell Duppins / Duppins Technology.
-- **Repo:** https://github.com/duppinstech/wp-dynamic-location-menus (<!-- GENERATE: public or private (check GitHub) -->)
-- **Current release:** <!-- GENERATE: latest tag and date from git -->
-- **Distribution:** <!-- GENERATE: how sites get updates (GitHub updater, WordPress.org, manual) -->
-- **Key dependencies:** <!-- GENERATE: from composer.json / package.json -->
-- **Integrations:** <!-- GENERATE: external APIs and services the code calls -->
-- **CI:** lint on PHP 7.4 and current 8.x; releases built by `release.yml` on `v*` tags. <!-- GENERATE: tests yes/no -->
+- **Repo:** https://github.com/duppinstech/wp-dynamic-location-menus (public)
+- **Current release:** v2.0.0, tagged 2026-10-18. `CHANGELOG.md` dates 2.0.0 as 2026-05-29.
+- **Distribution:** versioned zip from GitHub Releases. `DLM_GitHub_Updater` checks that channel. Disable with `DLM_DISABLE_GITHUB_UPDATER`.
+- **Key dependencies:** PHP >= 7.4 (`composer.json`). No Composer packages and no `package.json`. WordPress >= 6.0.
+- **Integrations:** GitHub Releases API (`api.github.com`). Clone and audit read stored Elementor post meta; they do not call an Elementor service.
+- **CI:** `.github/workflows/ci.yml` runs `composer lint` and `composer test` on PHP 8.2. Tests: yes, smoke check only (`tests/run.php` does not boot WordPress). Releases are built by `release.yml` on `v*` tags.
 
 ## Review watchlist
 Known items each department re-checks on every review until fixed. Remove lines when they're resolved.
-- **Security:** <!-- GENERATE or "none yet" -->
-- **Legal:** <!-- GENERATE: unlicensed assets, missing credits, privacy gaps, or "none yet" -->
-- **Finance:** <!-- GENERATE: metered APIs and who pays, or "none yet" -->
+- **Security:** none yet
+- **Legal:** `INTENT.md` and `composer.json` say proprietary. The plugin header, `readme.txt`, and `OWNERSHIP.md` say GPL-2.0-or-later (`OWNERSHIP.md`: from version 1.0.3).
+- **Finance:** none yet
 - **Product:** none yet
 - **Marketing:** none yet
 - **Support:** none yet
-- **Ops:** <!-- GENERATE: updater, migrations, uninstall gaps, or "none yet" -->
+- **Ops:** none yet
 - **UX:** none yet

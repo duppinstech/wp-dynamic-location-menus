@@ -6,14 +6,16 @@ Read by `finance-reviewer`, `marketing-reviewer`, `legal-reviewer` and `product-
 
 ## Product and positioning
 - **Product:** Dynamic Location Menus, by Duppins Technology (https://duppinstech.com).
-- **Audience:** <!-- GENERATE from INTENT.md, else _TBD_ -->
-- **Positioning:** <!-- GENERATE from INTENT.md/README, else _TBD_ -->
-- **Built for (client):** <!-- GENERATE from OWNERSHIP.md, or "product work" -->
+- **Audience:** Multi-location businesses that keep one WordPress navigation menu (`readme.txt`). An operator sets locations, URL patterns, and service slots in wp-admin (`INTENT.md`).
+- **Positioning:** Rewrites nav menu links from the visitor's current location context. One master menu of generic service URLs swaps to the matching city page (`INTENT.md`, `README.md`).
+- **Built for (client):** product work. Not work-for-hire for a single client (`OWNERSHIP.md`).
 
 ## Tiers
 | Tier | What's included | Price | Distribution |
 |---|---|---|---|
-| Core | <!-- GENERATE --> | _TBD_ | <!-- GENERATE --> |
+| Core | The plugin in this repository. No Pro add-on is in the repo. | _TBD (Odell)_ | Versioned zip from GitHub Releases |
 
 ## Cost drivers
-- <!-- GENERATE: metered APIs and whose key pays; hosting; support time _TBD_ -->
+- GitHub latest-release checks are unauthenticated unless a token is configured. The updater says never ship a token in the plugin. No other metered API is called.
+- Hosting: _TBD (Odell)_
+- Support time: _TBD (Odell)_
