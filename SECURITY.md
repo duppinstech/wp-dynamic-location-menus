@@ -41,6 +41,6 @@ This plugin follows common WordPress security practices:
 - Settings input is sanitized before storage
 - Output is escaped in the admin UI
 
-## Private Repository Access
+## Updates
 
-If this plugin is distributed from a private GitHub repository, site administrators may configure a GitHub personal access token via the `DLM_GITHUB_TOKEN` constant in `wp-config.php`. Tokens should use the minimum required scope (`repo` for private repositories) and must not be committed to version control.
+Updates are read from the public GitHub repository. This plugin does not ship a GitHub token, and a private repository is not a supported update source.

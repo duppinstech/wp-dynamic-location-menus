@@ -21,3 +21,9 @@ jobs:
 
       - name: Test
         run: composer test
+
+      - name: Release notes for the current version
+        run: |
+          set -euo pipefail
+          version=$(sed -n 's/^ \* Version:[[:space:]]*//p' dynamic-location-menus.php | tr -d '\r')
+          bash bin/release-notes.sh "$version" dynamic-location-menus.php "$RUNNER_TEMP/release-notes.md"

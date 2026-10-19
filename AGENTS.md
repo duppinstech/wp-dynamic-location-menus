@@ -22,13 +22,10 @@ Test (smoke check only; does not boot WordPress):
 composer test
 ```
 
-Build the release zip. This is what `.github/workflows/release.yml` runs when a `v*` tag is pushed. Replace `VERSION` with the tag version without the leading `v`.
+Build the release zip. This is what `.github/workflows/release.yml` runs when a `v*` tag is pushed. The asset is `wp-dynamic-location-menus.zip`. The folder inside is `dynamic-location-menus`.
 
 ```bash
-composer install --no-dev --optimize-autoloader --no-interaction
-mkdir -p build/dynamic-location-menus
-rsync -a --exclude='.git' --exclude='.github' --exclude='build' --exclude='.gitignore' --exclude='composer.lock' ./ build/dynamic-location-menus/
-cd build && zip -r "../dynamic-location-menus-VERSION.zip" dynamic-location-menus
+bash bin/build-zip.sh
 ```
 
 Do not tag, push, or publish a release unless the task says so.
