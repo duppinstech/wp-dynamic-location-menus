@@ -10,6 +10,9 @@ Request: $ARGUMENTS
 - Register it wherever the plugin wires its modules (see Architecture in `AGENTS.md`), at the right point in the load order, and explain the placement.
 - Run `composer dump-autoload` if the plugin autoloads and this is a new directory.
 
-<!-- GENERATE: sections for this plugin's own repeatable building blocks (templates, field groups, blocks, shortcodes, settings tabs, integrations), each listing the files to create and where to register them. Delete this comment if there are none. -->
+## Settings tab
+- In `includes/class-dlm-admin.php`, add a `nav-tab` and a `.dlm-tab` panel that share one `data-tab` value. The screen is Settings → Location Menus, slug `dlm-settings`.
+- `assets/admin.js` switches tabs from `data-tab`. There is no per-tab file and no build step.
+- A state-changing control uses an `admin_post_dlm_*` action registered in `DLM_Admin::register()`.
 
 After scaffolding, run `php -l` on the new files and list what's left for a human to fill in.
