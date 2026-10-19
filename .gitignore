@@ -13,3 +13,13 @@ __pycache__/
 CLAUDE.local.md
 .claude/settings.local.json
 .claude/worktrees/
+
+# --- Duppins Technology scaffold ---
+.env
+.env.*
+!.env.example
+node_modules/
+/*.zip
+.phpunit.result.cache
+.claude/scheduled_tasks.lock
+desktop.ini
