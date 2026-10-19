@@ -22,4 +22,8 @@ paths:
 
 ## Hooks we expose
 - New hooks are prefixed `dlm_`, documented with a docblock, and listed here. Renaming or removing a public hook is a breaking change; deprecate first.
-<!-- GENERATE: every apply_filters / do_action the plugin fires, one line each with what it's for. "None yet" if there are none. -->
+- `dlm_github_updater_config` — filter updater config (owner, repo, token, TTLs, icons) before it is stored. `includes/class-dlm-github-updater.php`.
+- `dlm_github_release_http_args` — filter the `wp_remote_get()` args for the GitHub latest-release request. Same file.
+- `dlm_scan_post_types` — post types the scanner indexes. Default is `page`. `includes/class-dlm-scanner.php`.
+- `dlm_detect_context` — return true or false to force whether location detection runs on this view, or null to keep the default. `includes/class-dlm-context.php`.
+- The plugin does not call `do_action`. `dlm_daily_scan` is a cron hook WordPress fires; the scanner listens for it.
